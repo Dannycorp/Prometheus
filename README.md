@@ -10,3 +10,7 @@ Used Kind <3
 
 
 ![Screenshot_20230121_183911](https://user-images.githubusercontent.com/8779526/213882159-7ec0982a-f426-459f-881d-5dfeb33b1833.png)
+
+
+manifests retreived from :
+https://github.com/prometheus-operator/kube-prometheus.git

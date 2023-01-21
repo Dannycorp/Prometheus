@@ -3,6 +3,16 @@ Monitor a Kubernetes Cluster with Prometheus and Grafana
 
 Used Kind <3
 
+kind create cluster --name monitoring --image kindest/node:v1.24 --config kind.yaml
+
+test the cluster:
+
+kubectl get nodes
+
+
+
+
+
 manifests retreived from :
 https://github.com/prometheus-operator/kube-prometheus.git
 
@@ -18,6 +28,17 @@ git clone --depth 1 https://github.com/prometheus-operator/kube-prometheus.git -
 copy the goods (I only wanted the manifests folder this time, also the setup folder is inside the manifests dir):
 
 cp -R /tmp/manifests .
+
+
+Custom Resource Definitions:
+
+kubectl create -f ./manifests/setup/
+
+kubectl create -f ./manifests/
+
+This step took a few minutes:
+
+kubectl -n monitoring get pods (Wait for the running status of all pods, that worked best for me)
 
 
 
